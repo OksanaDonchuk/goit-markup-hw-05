@@ -584,12 +584,14 @@
         <div class="footer-form">
           <p class="footer-form-text">Subscribe</p>
           <form class="footer-form-subscribe">
-            <input
-              class="footer-form-input"
-              type="email"
-              placeholder="E-mail"
-              required
-            />
+            <label class="footer-form-subscribe-label">
+              <input
+                class="footer-form-input"
+                type="email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
             <button class="subscribe-button" type="submit">
               Subscribe
               <svg
@@ -625,13 +627,11 @@
 
         <form class="modal-form">
           <div class="modal-form-container">
-            <label class="modal-form-field" for="input-name"
-              ><p class="modal-form-field-desc">Name</p></label
-            >
-            <span class="modal-form-input-wrapper">
+            <label class="modal-form-field" for="user-name">Name</label>
+            <div class="modal-form-input-wrapper">
               <input
                 class="modal-form-input"
-                id="input-name"
+                id="user-name"
                 type="text"
                 name="user_name"
                 pattern="[a-zA-Zа-яА-ЯіІїЇєЄґҐʼ]+"
@@ -641,14 +641,12 @@
               <svg class="modal-form-input-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
-            </span>
+            </div>
           </div>
 
           <div class="modal-form-container">
-            <label class="modal-form-field" for="input-phone">
-              <p class="modal-form-field-desc">Phone</p></label
-            >
-            <span class="modal-form-input-wrapper">
+            <label class="modal-form-field" for="input-phone"> Phone</label>
+            <div class="modal-form-input-wrapper">
               <input
                 class="modal-form-input"
                 id="input-phone"
@@ -661,14 +659,12 @@
               <svg class="modal-form-input-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
-            </span>
+            </div>
           </div>
 
           <div class="modal-form-container">
-            <label class="modal-form-field" for="input-email">
-              <p class="modal-form-field-desc">Email</p>
-            </label>
-            <span class="modal-form-input-wrapper">
+            <label class="modal-form-field" for="input-email"> Email </label>
+            <div class="modal-form-input-wrapper">
               <input
                 class="modal-form-input"
                 id="input-email"
@@ -679,35 +675,38 @@
               <svg class="modal-form-input-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
-            </span>
+            </div>
           </div>
 
           <div class="modal-form-container-comment">
-            <label class="modal-form-field" for="input-comment">
-              <p class="modal-form-field-desc">Comment</p></label
-            >
+            <label class="modal-form-field" for="user-comment"> Comment</label>
             <textarea
               class="modal-form-message"
-              id="input-comment"
+              id="user-comment"
               name="user_message"
               placeholder="Text input"
             ></textarea>
           </div>
 
           <div class="modal-form-checkbox-container">
-            <label class="modal-form-checkbox-label">
-              <input
-                class="modal-form-checkbox visually-hidden"
-                type="checkbox"
-                name="user_accept_policy"
-                required
-              />
-              <svg class="modal-form-own-checkbox" width="16" height="16">
-                <use href="./images/icons.svg#icon-checkbox"></use>
-              </svg>
-              I accept the terms and conditions of the&nbsp;
-              <a class="accent-color" href="">Privacy Policy</a>
-            </label>
+            <input
+              class="modal-form-checkbox visually-hidden"
+              id="user-privacy"
+              type="checkbox"
+              value="true"
+              name="user-privacy"
+              required
+            />
+            <label class="modal-form-checkbox-label" for="user-privacy"
+              ><span class="modal-form-accept"
+                ><svg class="modal-form-own-checkbox" width="10" height="8">
+                  <use
+                    href="./images/icons.svg#icon-checkbox"
+                  ></use></svg></span
+              >I accept the terms and conditions of the&nbsp;
+
+              <a class="accent-color" href="">Privacy Policy</a></label
+            >
           </div>
 
           <button class="modal-form-btn" type="submit">Send</button>
