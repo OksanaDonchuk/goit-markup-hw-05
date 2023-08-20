@@ -756,9 +756,6 @@ address {
 }
 
 .modal-form-checkbox-container {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.03em;
@@ -766,6 +763,11 @@ address {
   margin-bottom: 24px;
   padding-left: 24px;
   padding-right: 24px;
+}
+
+.modal-form-checkbox-label {
+  display: flex;
+  align-items: center;
 }
 
 .accent-color {
@@ -783,6 +785,10 @@ address {
 .modal-form-checkbox:checked + .modal-form-own-checkbox {
   fill: var(--secondary-color);
   background-color: var(--active-color);
+  border-color: var(--active-color);
+}
+
+.modal-form-checkbox:focus + .modal-form-own-checkbox {
   border-color: var(--active-color);
 }
 
